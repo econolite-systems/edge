@@ -19,3 +19,6 @@
 [submodule "rsu"]
 	path = rsu
 	url = ../rsu
+[submodule "asn1-j2735"]
+	path = asn1-j2735
+	url = ../asn1-j2735/

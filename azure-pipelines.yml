@@ -64,6 +64,7 @@ stages:
     - checkout: self
       submodules: true
       persistCredentials: true
+      fetchDepth: 2
     - checkout: templates
     - task: Bash@3
       displayName: Version Files
