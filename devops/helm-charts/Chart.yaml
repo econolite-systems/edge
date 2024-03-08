@@ -1,0 +1,4 @@
+apiVersion: v1
+description: ODE Vehicle Priority Edge
+name: "ode-vehicle-priority-edge"
+version: 0.1.0

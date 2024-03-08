@@ -1,0 +1,54 @@
+# Default values for ode-edge-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+fullnameOverride: ode-edge-service
+replicaCount: 1
+image:
+  repository: cosysdev.azurecr.io/ode-edge-service
+  repositoryTestServer: cosysdev.azurecr.io/ode-edge-service-test-server
+  pullPolicy: Always
+service:
+  type: ClusterIP
+  port: 80
+
+probes:
+  enabled: false
+
+ingress:
+  enabled: false
+  path: /configuration
+  pathType: Prefix
+  host: api.mound-rd.cosysdev.com
+  issuer: letsencrypt-production
+
+kafka:
+  userName: internal-service
+  groupid: 'priority.edge.00000000-0000-0000-0000-000000000000'
+  bootstrapServer: message-moundrd-kafka-bootstrap.moundrd.svc.cluster.local:9092
+
+secrets:
+  imagePullSecret: cosysdevcr
+  connectionStrings:
+    Mongo:
+      resource: mongo-cs
+      key: Mongo
+  kafkaPassword:
+    resource: internal-service
+    key: password
+
+connectionStrings:
+  identity: https://ident.cosysdev.com
+
+mongoDatabase: mound-road
+
+resources:
+  requests:
+    cpu: "10m"
+    memory: "1Gi"
+  limits:
+    cpu: "1000m"
+    memory: "2Gi"
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

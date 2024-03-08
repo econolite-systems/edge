@@ -1,0 +1,67 @@
+[
+    {
+        "vehicles": [
+            {
+                "id": "Bus101",
+                "type": "bus",
+                "allowed": true,
+                "startTime": {
+                    "hour": 8,
+                    "minute": 0
+                },
+                "endTime": {
+                    "hour": 17,
+                    "minute": 0
+                }
+            },
+            {
+                "id": "Bus102",
+                "type": "bus",
+                "allowed": true,
+                "startTime": {
+                    "hour": 8,
+                    "minute": 0
+                },
+                "endTime": {
+                    "hour": 17,
+                    "minute": 0
+                }
+            },
+            {
+                "id": "365779719",
+                "type": "bus",
+                "allowed": true,
+                "startTime": {
+                    "hour": 0,
+                    "minute": 0
+                },
+                "endTime": {
+                    "hour": 23,
+                    "minute": 59
+                }
+            }
+        ],
+        "priorityRequestVehicleClassType": [
+            {
+                "id": 1,
+                "type": "ev"
+            },
+            {
+                "id": 5,
+                "type": "bus"
+            }
+        ],
+        "priorityRequestVehicleClassLevel": [
+            {
+                "id": 1,
+                "type": "ev"
+            },
+            {
+                "id": 5,
+                "type": "bus"
+            }
+        ],
+        "priorityRequestVehicleIntersections": null,
+        "id": "2434a7a0-2e1e-4423-a655-2c5798b78a25"
+    }
+]
